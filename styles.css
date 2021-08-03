@@ -2,11 +2,7 @@ body{
     margin: 0;
     border-top: 7px solid orange;
     font-family: sans-serif;
-    color: gray;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    color: gray;  
 }
 
 a{
@@ -19,10 +15,17 @@ article > h2 > a{
     text-decoration: underline dashed;
 }
 
+article > h2 > a:hover{
+    background-color: #555;
+    color: #FFF;
+    text-decoration: none;    
+}
+
 main{    
     display: flex;    
     justify-content: center;
     margin-top: 60px;    
+    margin-bottom: 60px;
 }
 
 article{
@@ -45,7 +48,9 @@ figcaption{
     font-size: 0.95em;
 }
 
-footer{                    
+footer{   
+    position: fixed;
+    bottom: 0;    
     width: 100%;
     text-align: center;    
     background-color: burlywood;
