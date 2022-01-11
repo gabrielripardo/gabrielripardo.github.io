@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;600&display=swap');
+
 :root {
   --headline-font: "Lora", serif;
   --paragraph-font: "Fira Sans", sans-serif;
@@ -15,6 +18,86 @@ h2 {
   font-family: var(--headline-font);
   font-size: 35px;
   font-weight: normal;
+}
+
+.cards{
+  display: flex;
+  flex-direction: column;    
+  margin: 2px 10px;
+}
+
+.card{  
+  margin-bottom: 20px;
+  background-color: #302F3D;
+  border-radius: 20px;  
+  padding: 20px;   
+  width: 348px; 
+  box-shadow: 2px 2px 2px 1px rgb(48, 47, 61, 20%) ;   
+}
+
+.badge{
+  background-color: #CB92B1; 
+  border-radius: 30px;
+  color: #302F3D;
+  font-weight: 600;
+  padding: 5px 10px;  
+  margin: 5px 3px;
+}
+
+.group-badges{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.apresentation{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 292px;     
+  color: #fff;  
+}
+
+.name{
+  font-family: 'Merriweather Sans', serif;  
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.office{
+  margin-top: 5px;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 0.9em;
+}
+
+.photo{
+  height: 50%;  
+  border-radius: 100%;
+  border: solid #00FF00 2px;
+  margin-bottom: 10px;
+}
+
+.icon-place{
+  margin: 0 20px;
+  color: #837E9F; /*icon color*/
+}
+
+.locate-name{  
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.job-title{
+  font: 16px 'Merriweather Sans', serif;    
+  font-weight: bold;
+}
+
+.job-details{
+  padding: 0;
+  list-style-type: none;
+  font: 14px 'Merriweather Sans', serif;  
 }
 
 .signup-bg-stars {
@@ -150,21 +233,17 @@ figcaption {
   font-size: 0.95em;
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
+footer {  
+  display: flex;  
+  justify-content: end;
+  align-items: center;
   width: 100%;
+  height: 28px;
   text-align: center;
-  background-color: burlywood;
+  background-color: #222;    
 }
-
-footer > ul {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  padding: 0;
-}
-
-footer > ul > li {
-  margin: 0 5px;
+#footer-text{
+  font-size: 15px;
+  text-align: end;
+  margin: 10px 20px;
 }
