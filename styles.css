@@ -28,7 +28,7 @@ h2 {
 
 .card{  
   margin-bottom: 20px;
-  background-color: #302F3D;
+  background-color: rgba(254,254,254, 0.1);;
   border-radius: 20px;  
   padding: 20px;   
   width: 348px; 
