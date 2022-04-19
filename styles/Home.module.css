@@ -1,5 +1,9 @@
-.container {
-  padding: 0 2rem;
+.container {  
+  margin: 0;
+  border-top: 7px solid orange;
+  font-family: sans-serif;
+  color: #d5d5d5;
+  background-color: #040d21;
 }
 
 .main {
