@@ -10,7 +10,8 @@
 
 # next.js
 .next
-./next
+./.next
+
 out
 
 # production
@@ -34,3 +35,6 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+.next/build-manifest.json
+.next/build-manifest.json
+.next/server/middleware-build-manifest.js

@@ -4,6 +4,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
+  const curYear = new Date().getFullYear();
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -38,7 +40,7 @@ const Home: NextPage = () => {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-         Gabriel Ripardo
+         Gabriel Ripardo | {curYear}
         </a>
       </footer>
     </div>
