@@ -10,7 +10,6 @@
 
 # next.js
 .next
-./.next
 
 out
 
@@ -38,3 +37,5 @@ yarn-error.log*
 .next/build-manifest.json
 .next/build-manifest.json
 .next/server/middleware-build-manifest.js
+.next/server/middleware-react-loadable-manifest.js
+.next/build-manifest.json
