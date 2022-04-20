@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import apiGithub from './api/github'
 
 const Home: NextPage = () => {
   const curYear = new Date().getFullYear();
