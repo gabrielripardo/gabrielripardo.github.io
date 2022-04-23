@@ -3,11 +3,16 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useState } from 'react'
 import styles from '../styles/Home.module.css'
-import apiGithub from './api/github'
 
 const Home: NextPage = () => {
   const curYear = new Date().getFullYear();
   const [repos, setRepos] = useState([]);
+
+  const getName = async () => {
+    const rsl = await fetch('/api/github');
+    const name = await rsl.json()
+    console.log(name)
+  }
 
   async function getUsers() {
     let url = 'https://api.github.com/users/gabrielripardo/repos';
@@ -47,10 +52,14 @@ const Home: NextPage = () => {
           </p>
         </div>             
         <div className={styles.grid}>
-          <button onClick={getUsers}>Listar repositório</button>
+          <br/>
+          <button onClick={getName}>Get name</button>
+          <br />
+          <button className={styles.link} onClick={getUsers}>Listar repositórios</button>
+          <br />
           {
             repos.map((item: any) => (
-              <div>{item.name}</div>
+              <div key={item.id}>{item.name}</div>
             ))
           }
         </div>
