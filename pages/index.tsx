@@ -1,11 +1,25 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 import apiGithub from './api/github'
 
 const Home: NextPage = () => {
   const curYear = new Date().getFullYear();
+  const [repos, setRepos] = useState([]);
+
+  async function getUsers() {
+    let url = 'https://api.github.com/users/gabrielripardo/repos';
+    try {
+        let res = await fetch(url);
+        const rep = await res.json();
+        setRepos(rep);
+        console.log('# repos ',rep);
+    } catch (error) {
+        console.log(error);
+    }
+  }
   
   return (
     <div className={styles.container}>
@@ -26,11 +40,19 @@ const Home: NextPage = () => {
           
         </p>
 
-        <div className={styles.grid}>
+        <div>
           <p className={styles.description}>
-            Projects here          
+            Projects here         
           {/* <code className={styles.code}>pages/index.tsx</code> */}
           </p>
+        </div>             
+        <div className={styles.grid}>
+          <button onClick={getUsers}>Listar repositório</button>
+          {
+            repos.map((item: any) => (
+              <div>{item.name}</div>
+            ))
+          }
         </div>
       </main>
 
